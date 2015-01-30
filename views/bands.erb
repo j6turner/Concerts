@@ -1,0 +1,34 @@
+<h1><%= @band.name() %></h1>
+<h3>Select the venues that apply to this band.</h3>
+
+<hr noshade>
+
+<% if @venues.any?() %>
+  <form action="/bands/<%= @band.id() %>" method="post">
+    <input type="hidden" name="_method" value="patch">
+
+    <% @venues.each() do |venue| %>
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" name="id" value="<%= @venue.id() %>"<%= venue.name() %>
+        </label>
+      </div>
+    <% end %>
+    <button type="submit" class="btn btn-success">Add Venue</button>
+  </form>
+<% end %>
+
+<% if @band.venues().any?() %>
+  <h3>The venues for this band are as follows:</h3>
+  <ul>
+    <% @band.venues().each do |venue| %>
+      <li><%= venue.name() %></li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>There are currently no venues for this band.</p>
+<% end %>
+
+<hr noshade>
+
+<a href="/">Return to the Bands Page</a>
