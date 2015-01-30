@@ -1,0 +1,18 @@
+<h1>Bands</h1>
+
+<hr noshade>
+
+<form action="bands" method="post">
+  <input type="text" name="name" placeholder = "Slowburners">
+  <button type="submit" class="btn btn-info">Add Band</button>
+</form>
+
+<ul>
+  <% if @bands_all.any?() %>
+  <% @bands_all.each() do |bands| %>
+  <li><a href="/bands/<%= band.id() %>"><%= band.name() %></a></li>
+  <% end %>
+  <% else %>
+  <%= "The band log is empty." %>
+  <% end %>
+</ul>
