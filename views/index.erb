@@ -4,15 +4,18 @@
 
 <form action="bands" method="post">
   <input type="text" name="name" placeholder = "Slowburners">
-  <button type="submit" class="btn btn-info">Add Band</button>
+  <button type="submit" class="btn btn-danger">Add Band</button>
 </form>
 
+<br >
+
 <ul>
-  <% if @bands_all.any?() %>
-  <% @bands_all.each() do |bands| %>
-  <li><a href="/bands/<%= band.id() %>"><%= band.name() %></a></li>
+<h6>To assign venues, click on the band name.</h6>
+  <% if @bands.any?() %>
+  <% @bands.each() do |band| %>
+    <li><h5><a href="/bands/<%= band.id() %>"><span class="clickable"><%= band.name() %></span></h5></a></li>
   <% end %>
   <% else %>
-  <%= "The band log is empty." %>
+    <%= "The band log is empty." %>
   <% end %>
 </ul>

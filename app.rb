@@ -4,19 +4,33 @@ Bundler.require(:default)
 Dir[File.dirname(__FILE__) + '/lib/*.rb'].each { |file| require file }
 
 get('/') do
-  @bands_all = Band.all()
-  @venues_all = Venue.all()
+  @bands = Band.all()
+  @venues = Venue.all()
   erb(:index)
 end
 
 post("/bands") do
-  band_name = params.fetch("band_name")
-  Band.new({:name => band_name}).create()
+  name = params.fetch("name")
+  @band = Band.new({ :name => name }).save()
   redirect("/")
 end
 
+get("/bands/:id") do
+  @band = Band.find(params.fetch("id").to_i())
+  @bands = Band.all()
+  @venues = @band.venues()
+  erb(:bands)
+end
+
+post("/venues/:id") do
+  venues = params.fetch("name")
+  id = params.fetch("id").to_i()
+  @venue = Venue.create({ :name => name })
+  redirect("/bands/#{id}")
+end
+
 post("/venues") do
-  venue_name = params.fetch("venue_name")
-  Venue.new({:name => venue_name}).create()
+  name = params.fetch("name")
+  @venue = Venue.new({:name => name}).save()
   redirect("/")
 end
