@@ -4,8 +4,8 @@ Bundler.require(:default)
 Dir[File.dirname(__FILE__) + '/lib/*.rb'].each { |file| require file }
 
 get('/') do
-  @bands_all = Bands.all()
-  @venues_all = Venues.all()
+  @bands_all = Band.all()
+  @venues_all = Venue.all()
   erb(:index)
 end
 
