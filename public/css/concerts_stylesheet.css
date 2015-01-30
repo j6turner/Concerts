@@ -1,0 +1,44 @@
+h1 {
+  font-family: Georgia, Helvetica;
+  color: #FFFFFF;
+}
+
+h2 {
+  font-family: Georgia, Helvetica;
+  color: #FFFFFF;
+}
+
+h3 {
+  font-family: Verdana, Helvetica;
+  color: #FF6600;
+}
+
+h4 {
+  font-family: Times, Helvetica;
+  color: #BCCACA;
+}
+
+h5 {
+  font-family: Verdana, Helvetica;
+  color: #FF6600;
+}
+
+h6 {
+  font-family: Times, Helvetica;
+  color: #BCCACA;
+}
+
+body {
+  background-color: #000000;
+  border: 3px solid #CC0000;
+  padding: 10px 15px 15px 20px;
+}
+
+li {
+  font-family: Verdana, Helvetica;
+}
+
+.clickable {
+  cursor: pointer;
+  color: #009999;
+}
