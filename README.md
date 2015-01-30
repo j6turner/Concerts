@@ -41,13 +41,14 @@ postgres
 ```
 To connect to the needed databases, enter the following
 into the command line of another terminal window:
+```
 psql
+```
 
 To create the needed databases, return to the original project window
 to type the following:
-
+```
 rake db:create
-
 ```
 
 
