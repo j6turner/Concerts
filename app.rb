@@ -9,6 +9,7 @@ get('/') do
   erb(:index)
 end
 
+
 post("/bands") do
   name = params.fetch("name")
   @band = Band.new({ :name => name }).save()
