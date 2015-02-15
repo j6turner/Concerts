@@ -1,12 +1,15 @@
+***
 Concerts
 ======================
 
-Concerts is an application that allows the user to track bands
-and the venues associated with those bands.
+**Concerts is an application that allows the user to track bands
+and the venues associated with those bands.**
+***
 
 
-Installation
-------------
+###Installation
+
+Ruby v.2.2.0 was used to create this application.
 
 To run the primary application and/or any of the included
 RSpec files for testing, run either the included Gemfile
@@ -30,10 +33,6 @@ gem install bundler
 bundle
 ```
 
-Ruby v.2.2.0 was used to create this application.
-
------
-
 To run PostgreSQL, type the following into the command line
 of one terminal window:
 ```PostgreSQL
@@ -52,8 +51,7 @@ rake db:create
 ```
 
 
-Usage
------
+###Usage
 
 Upon completion of the above steps in the Installation section,
 open a web browser to enter the following address:
@@ -62,17 +60,15 @@ open a web browser to enter the following address:
 localhost:4567/
 ```
 
-Enter a band name. Observe the results. Continue....
+_Enter a band name_. _Observe the results_. _Continue_....
 
 
-Known Bugs
-----------
+###Known Bugs
 
-None as of 2014-01-30.
+None as of 2015-01-30.
 
 
-Contributing
-------------
+###Contributing
 
 1. Submit better options.
 
@@ -81,13 +77,11 @@ Contributing
 3. Branch!
 
 
-Author
-------
+###Author
 
 J. TURNER
 
 
-License
-------------
+###License
 
-MIT license.
+MIT license
